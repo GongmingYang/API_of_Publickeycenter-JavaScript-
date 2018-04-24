@@ -18,7 +18,7 @@
 
 <input type='file'  onchange="pkc_open_file(event,f_onload)"><br>
 <script>
-
+    //This function is part of API
     function pkc_open_file (event,f_onload)
     {
         var input = event.target;
@@ -48,6 +48,7 @@
         reader.readAsBinaryString(input.files[0]);
     }
 
+    //this function is user-defined API. Users can implement their ways to use the keys.
     function f_onload(keys){
         //The result of private_key_file
         alert(data);
